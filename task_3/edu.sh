@@ -12,9 +12,7 @@ arr_answer=()
 # Вывод содержимого массива
 for i in "${!my_array[@]}"; do
   
-  #echo "Line $i: ${my_array[i]}"
   line=${my_array[i]}
-  #echo `awk -F '","' ${my_array[i]}`
   
   question=$(echo "$line" | sed 's/"//g' | cut -d ',' -f1)
   _answer=$(echo "$line" | sed 's/"//g' | cut -d ',' -f2)
